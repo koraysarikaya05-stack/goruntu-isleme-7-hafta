@@ -1,0 +1,13 @@
+Görev 9 Raporu: IDFT ile Onarım ve Metrik Kıyaslaması
+
+Bu görevde gürültülü resmi filtreleyip IDFT ile onardık ve orijinaline benzerliğini ZNCC ile ölçtük. Görüntü kalitesini/benzerliğini ölçen temel metriklerin kısa kıyaslaması şöyledir:
+
+ZNCC (Zero-Mean Normalized Cross Correlation): Parlaklık ve kontrast değişimlerinden etkilenmez, resmin yapısını iyi tanır. Ancak ortalama ve standart sapma hesapları içerdiği için MSE/MAE'ye göre hesabı biraz daha uzundur.
+
+MSE (Ortalama Kare Hata): Hesaplanması en hızlı ve en kolay metriktir. Ancak piksel farklarının karesini aldığı için ufak gürültüleri/aykırı değerleri çok abartır ve gözümüzün algıladığı kaliteyle pek uyuşmaz.
+
+MAE (Ortalama Mutlak Hata): MSE'deki gibi hatayı aşırı abartmaz, uç değerlere karşı daha dengelidir. Fakat resimdeki kenar-köşe gibi yapısal bozulmaları fark etme yeteneği zayıftır.
+
+PSNR: Literatürde standart kabul edilir (desibel ile ölçülür). Ancak temelde MSE tabanlı olduğu için insan gözüne her zaman hitap etmez (resim bulanık olsa bile yüksek puan verebilir).
+
+SSIM (Yapısal Benzerlik): İnsan gözünün kalite algısına en yakın sonucu verir çünkü doku, parlaklık ve kontraste birlikte bakar. Tek eksiği pencereli hesaplama yaptığı için piksel bazlı metriklere göre işlem yükünün biraz daha fazla olmasıdır.

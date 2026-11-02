@@ -1,0 +1,11 @@
+Görev 10 Raporu: Frekans Filtrelerinin Etkileri
+
+Frekans uzayında hazırladığımız 4 temel filtrenin, görüntüdeki gürültülere, kenarlara ve parlaklığa olan etkileri şöyledir:
+
+Low-Pass (Alçak Geçiren) Filtre: Gürültü yapısal olarak yüksek frekanslı olduğu için, bu filtre gürültüleri çok başarılı şekilde sildi. Ancak resimdeki keskin kenarlar (köşeler) de yüksek frekans olduğu için kenar geçişleri bulanıklaştı (blurlandı). Merkezdeki sıfır frekansını (DC) tuttuğu için resmin genel parlaklık düzeyi aynı kaldı.
+
+High-Pass (Yüksek Geçiren) Filtre: Gürültüyü hiç silmedi, aksine arka plan karardığı için gürültü piksellerini daha da parlatıp belirginleştirdi. Sadece ani değişimleri geçirdiği için kenar geçişlerini ip gibi keskin şekilde ortaya çıkardı (kenar tespiti yaptı). Merkezdeki frekansı (DC bileşeni) engellediği için resmin genel ışığı gitti, dümdüz siyah bir arka plan oluştu.
+
+Band-Pass (Bant Geçiren) Filtre: Sadece seçtiğimiz frekans aralığını geçirdiği için, gürültünün sadece bir kısmını gösterip geri kalanını sildi. Kenar geçişlerinde sadece belli bir kalınlıktaki hatlar görünür kaldı. Yine merkezi kestiği için genel parlaklık tamamen sıfırlandı ve karanlık bir çıktı aldık.
+
+Band-Reject (Bant Söndüren) Filtre: Yüksek frekansların çoğuna dokunmadığı için kenar geçişlerindeki keskinlik neredeyse orijinali gibi bozulmadan kaldı. Merkeze (DC bileşenine) dokunmadığı için de genel parlaklık korundu. Fakat gürültülerin sadece çok kısıtlı bir frekans bandını maskelediği için resmi tam temizleyemedi, gürültüler büyük oranda görünmeye devam etti.
