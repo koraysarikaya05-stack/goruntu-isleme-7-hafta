@@ -1,0 +1,18 @@
+ Gürültülü Sinyalin Gauss ve Medyan Filtreleri ile Temizlenmesi ve Karşılaştırmalı Analizi
+1. Deneyin Amacı:
+Bu çalışmada, önceden üretilmiş ve üzerine rastgele gürültü eklenmiş sinüsoidal veri vektörü; Gauss ve Medyan filtreleri kullanılarak gürültüden arındırılmış ve filtrelerin performansları karşılaştırılmıştır.
+
+2. Filtrelerin Çalışma Mantığı:
+
+Gauss Filtresi: Komşu örneklerin Gauss dağılımına göre ağırlıklı ortalamasını alarak veriyi yumuşatır (smoothing).
+
+Medyan Filtresi: Belirlenen bir pencere (kernel) boyutundaki elemanları sıralayıp ortanca (medyan) değeri seçerek aykırı değerleri bastırır.
+
+3. Elde Edilen Sonuçların Yorumu:
+
+Gauss Filtresi (Yeşil Çizgi): Sinüs dalgası gibi sürekli ve yumuşak geçişli sinyaller üzerinde son derece başarılı bir performans göstermiştir. Rastgele gürültüyü etkili bir şekilde bastırarak orijinal sinüse (Mavi Çizgi) en yakın, pürüzsüz (smooth) ve doğal eğriyi elde etmemizi sağlamıştır.
+
+Medyan Filtresi (Kırmızı Çizgi): Gürültünün genliğini azaltmada başarılı olsa da, sinyal üzerinde belirgin basamaklanmalara ve kırılmalara (tırtıklı yapıya) neden olmuştur. Medyan filtresi doğası gereği ani sıçramalı (tuz-karabiber tipi) gürültülerde daha etkili olup sürekli rastgele gürültüde Gauss kadar pürüzsüz bir sonuç verememiştir.
+
+Sonuç:
+Sinüsoidal sinyallerdeki sürekli rastgele gürültüyü temizlemek ve dalga formunu korumak için Gauss Filtresi, Medyan Filtresine kıyasla belirgin şekilde daha üstün ve uygundur.
